@@ -8,6 +8,8 @@ import { AboutComponent } from './about/about.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ContactComponent } from './contact/contact.component';
+import { TabsModule } from 'ngx-tabset';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,16 @@ import { ContactComponent } from './contact/contact.component';
     AboutComponent,
     ExperienceComponent,
     SkillsComponent,
-    ContactComponent
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    NgxPaginationModule,
+    AppRoutingModule,
+    TabsModule.forRoot(),
+    
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
